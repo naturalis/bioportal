@@ -1,0 +1,15 @@
+[submodule "bioportal-dashboard"]
+	path = bioportal-dashboard
+	url = https://github.com/naturalis/bioportal-dashboard/
+[submodule "bioportal-php-client"]
+	path = bioportal-php-client
+	url = https://github.com/naturalis/bioportal-php-client.git
+[submodule "bioportal_sitemap_generator"]
+	path = bioportal_sitemap_generator
+	url = https://github.com/naturalis/bioportal_sitemap_generator.git
+[submodule "drupal_naturalis_installation_profile"]
+	path = drupal_naturalis_installation_profile
+	url = https://github.com/naturalis/drupal_naturalis_installation_profile.git
+[submodule "ndabio"]
+	path = ndabio
+	url = https://github.com/naturalis/ndabio.git
