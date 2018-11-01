@@ -40,4 +40,5 @@ if [ ! -f library/bioportal-client/config/client.ini ]; then
 fi
 /usr/bin/yes | drush make --no-core /opt/project/bioportal.make
 /usr/bin/yes | /usr/local/bin/drush en naturalis_theme
+/usr/bin/yes | drush rr
 /usr/bin/yes | drush cc all
