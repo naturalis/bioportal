@@ -18,7 +18,6 @@ fi
 if [ ! -d profiles/naturalis ]; then
     echo "Naturalis profile missing ... linking naturalis profile"
     ln -s /opt/project/drupal_naturalis_installation_profile/naturalis profiles/naturalis
-    drush cc all
 fi
 if [ ! -d dashboard ]; then
     echo "Bioportal dashboard is missing ... linking bioportal dashboard"
