@@ -2,10 +2,8 @@
 cd /var/www/html
 zcat /opt/project/bioportal.sql.gz | /usr/local/bin/drush sql-cli
 chmod -R 755 
-mkdir /var/www/html/sites/default/files
-mkdir /var/www/html/sites/default/modules
-/bin/cp -r /opt/project/sites/default/files/* sites/default/files/
-/bin/cp -r /opt/project/sites/default/modules/* sites/default/modules/
+/bin/cp -Rf /opt/project/default/files sites/default/files/
+/bin/cp -Rf /opt/project/default/modules sites/default/modules/
 /usr/bin/yes | drush make --no-core /opt/project/bioportal.make
 /usr/bin/yes | /usr/local/bin/drush cc all
 /usr/bin/yes | /usr/local/bin/drush en naturalis_theme
@@ -39,5 +37,8 @@ fi
 if [ ! -f sitemap-index.xml ]; then
     echo "Sitemap-index.xml is missing ... linking to sitemap-index.xml"
     ln -s /opt/project/bioportal_sitemap_generator/sitemap/sitemap-index.xml sitemap-index.xml 
+fi
+if [ ! -f library/bioportal-client/config/client.ini ]; then
+    cp library/bioportal-client/config/client.ini.tpl library/bioportal-client/config/client.ini
 fi
 /usr/bin/yes | drush cc all
