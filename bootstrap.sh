@@ -5,8 +5,6 @@ chmod -R 755
 /bin/cp -Rf /opt/project/default/files sites/default/files/
 /bin/cp -Rf /opt/project/default/modules sites/default/modules/
 /usr/bin/yes | drush make --no-core /opt/project/bioportal.make
-/usr/bin/yes | /usr/local/bin/drush cc all
-/usr/bin/yes | /usr/local/bin/drush en naturalis_theme
 rm -rf sites/all
 ln -s /opt/project/ndabio/all sites/all
 if [ ! -d library ]; then
@@ -41,4 +39,5 @@ fi
 if [ ! -f library/bioportal-client/config/client.ini ]; then
     cp library/bioportal-client/config/client.ini.tpl library/bioportal-client/config/client.ini
 fi
+/usr/bin/yes | /usr/local/bin/drush en naturalis_theme
 /usr/bin/yes | drush cc all
