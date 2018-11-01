@@ -1,7 +1,7 @@
 #!/bin/bash
 cd /var/www/html
 zcat /opt/project/bioportal.sql.gz | /usr/local/bin/drush sql-cli
-chmod -R 755 
+chmod -R 755  sites/default
 /bin/cp -Rf /opt/project/default/files sites/default/files/
 /bin/cp -Rf /opt/project/default/modules sites/default/modules/
 /usr/bin/yes | drush make --no-core /opt/project/bioportal.make
