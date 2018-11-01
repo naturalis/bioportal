@@ -4,7 +4,6 @@ zcat /opt/project/bioportal.sql.gz | /usr/local/bin/drush sql-cli
 chmod -R 755  sites/default
 /bin/cp -Rf /opt/project/default/files sites/default/files/
 /bin/cp -Rf /opt/project/default/modules sites/default/modules/
-/usr/bin/yes | drush make --no-core /opt/project/bioportal.make
 rm -rf sites/all
 ln -s /opt/project/ndabio/all sites/all
 if [ ! -d library ]; then
@@ -26,6 +25,7 @@ fi
 if [ ! -f customhtaccess ]; then
     echo "customhtaccess missing ... copying customhtaccess"
     cp /opt/project/customhtaccess .
+    cp /opt/project/.htaccess
 fi
 if [ ! -f sitemap ]; then
     echo "Sitemap is missing ... linking to sitemap"
@@ -38,5 +38,6 @@ fi
 if [ ! -f library/bioportal-client/config/client.ini ]; then
     cp library/bioportal-client/config/client.ini.tpl library/bioportal-client/config/client.ini
 fi
+/usr/bin/yes | drush make --no-core /opt/project/bioportal.make
 /usr/bin/yes | /usr/local/bin/drush en naturalis_theme
 /usr/bin/yes | drush cc all
