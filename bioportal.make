@@ -3,9 +3,6 @@ api: 2
 projects:
   drupal:
     version: '7.60'
-  naturalis:
-    type: profile
-    custom_download: true
   admin_menu:
     version: 3.0-rc5
   adminimal_admin_menu:
@@ -66,35 +63,3 @@ projects:
     version: '1.17'
   zurb_foundation:
     version: 5.0-alpha8
-  feature_bioportal_collectie_lijst:
-    type: module
-    custom_download: true
-  feature_bioportal_controller:
-    type: module
-    custom_download: true
-  feature_bioportal_nodes_menus:
-    type: module
-    custom_download: true
-  nba_dashboard:
-    type: module
-    custom_download: true
-  nba_dataset:
-    type: module
-    custom_download: true
-  ndabio:
-    type: module
-    custom_download: true
-  ndabioresults:
-    type: module
-    custom_download: true
-  uuid_features_menu:
-    type: module
-    custom_download: true
-  bioportal_theme:
-    type: theme
-    custom_download: true
-  drupal_naturalis_installation_profile:
-    type: theme
-    'download][type': git
-    'download][url': 'https://github.com/naturalis/drupal_naturalis_installation_profile.git'
-    'download][revision': 55a224fa7d146fb7b4026c9bf0b9ee6605e20f6b

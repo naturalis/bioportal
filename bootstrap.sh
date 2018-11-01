@@ -1,6 +1,7 @@
 #!/bin/bash
 cd /var/www/html
-/bin/cat /opt/project/bioportal.sql | /usr/local/bin/drush sql-cli
+zcat /opt/project/bioportal.sql.gz | /usr/local/bin/drush sql-cli
+chmod -R 755 
 mkdir /var/www/html/sites/default/files
 mkdir /var/www/html/sites/default/modules
 /bin/cp -r /opt/project/sites/default/files/* sites/default/files/
