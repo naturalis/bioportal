@@ -13,3 +13,6 @@
 [submodule "ndabio"]
 	path = ndabio
 	url = https://github.com/naturalis/ndabio.git
+[submodule "nba-dwca-downloader"]
+	path = nba-dwca-downloader
+	url = https://github.com/naturalis/nba-dwca-downloader
